@@ -26,6 +26,10 @@ public class Chem implements java.io.Serializable {
 
     private java.lang.Double CASNumber;
 
+    private java.util.List<net.apispark.webapi.representation.Chem> Interactions = new java.util.ArrayList<net.apispark.webapi.representation.Chem>();
+
+    private java.lang.Double FlashPoint;
+
     /**
      * Returns the value of property "id". 
      * Auto-generated primary key field
@@ -105,7 +109,7 @@ public class Chem implements java.io.Serializable {
 
     /**
      * Returns the value of property "CASNumber". 
-     * This property is a reference to a Company
+     * This property is a reference to allow Chems to be easily found in databases
      */
     @com.fasterxml.jackson.annotation.JsonProperty("CAS Number")
     public java.lang.Double getCASNumber() {
@@ -117,6 +121,37 @@ public class Chem implements java.io.Serializable {
      */
     public void setCASNumber(java.lang.Double CASNumber) {
         this.CASNumber = CASNumber;
+    }
+
+    /**
+     * Returns the value of property "Interactions". 
+     * List of Chems which have a negative interaction with the given chemical
+     */
+    public java.util.List<net.apispark.webapi.representation.Chem> getInteractions() {
+        return Interactions;
+    }
+
+    /**
+     * Updates the value of property "Interactions". 
+     */
+    public void setInteractions(java.util.List<net.apispark.webapi.representation.Chem> Interactions) {
+        this.Interactions = Interactions;
+    }
+
+    /**
+     * Returns the value of property "FlashPoint". 
+     * 
+     */
+    @com.fasterxml.jackson.annotation.JsonProperty("Flash Point")
+    public java.lang.Double getFlashPoint() {
+        return FlashPoint;
+    }
+
+    /**
+     * Updates the value of property "FlashPoint". 
+     */
+    public void setFlashPoint(java.lang.Double FlashPoint) {
+        this.FlashPoint = FlashPoint;
     }
 
 }
